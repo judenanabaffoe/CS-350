@@ -1,14 +1,14 @@
-# CS-350
-Coursework and lab projects for CS 350 at SNHU. Contains Python scripts and documentation for embedded systems development and hardware integration on a Raspberry Pi using the Codio environment.
-aCS 350: Embedded Systems Coursework
-This repository contains my lab assignments, projects, and hardware testing scripts for the CS 350 course at Southern New Hampshire University. The code in this repository is written in Python and is designed to run on a Raspberry Pi utilizing the Codio IDE.
+CS 350 Portfolio Reflection
+Summarize the project and what problem it was solving. 
+The main project for this course was developing a smart thermostat prototype using a microcontroller (Raspberry Pi/TI board). The problem was to design an embedded system that could read ambient temperature via an I2C sensor, evaluate that data against a target temperature, and trigger hardware outputs (LEDs representing heating or cooling states) using a state machine. It also required simulating data transmission to a server using UART communication to meet business requirements for remote monitoring.
+What did you do particularly well? 
+I excelled at the troubleshooting and diagnostic phases. Because of my professional background working with physical electrical infrastructure, I approached the hardware-software integration methodically. When dealing with unresponsive GPIO pins or sensor communication errors, I systematically isolated the software logic from the physical wiring, verified inputs and outputs, and tested one component at a time rather than making scattered changes to the code.
+Where could you improve? 
+I could improve on optimizing the low-level memory management and refining the transition timing within the state machine. While the system functioned correctly through polling, transitioning to a more interrupt-driven architecture could make the thermostat more responsive and power-efficient, which is critical in real-world embedded systems.
+What tools and/or resources are you adding to your support network? 
+I am adding official hardware datasheets and pinout diagrams to my permanent resource library. Learning to read manufacturer specifications for I2C and UART protocols, rather than relying solely on secondary tutorials, has been invaluable. Additionally, I am keeping my structured testing environments and documentation templates to ensure future projects have a solid foundation before coding begins.
+What skills from this project will be particularly transferable to other projects and/or course work? 
+The ability to design and implement a robust state machine will translate directly into my software engineering degree and my independent game development projects. The logic used to manage a thermostat's heating/cooling states is fundamentally similar to managing game states, player inputs, and UI updates in C#. Furthermore, learning to optimize code for strict hardware constraints in embedded systems will help me write more performant, optimized code in general.
+How did you make this project maintainable, readable, and adaptable? 
+I ensured maintainability by modularizing the code. I separated the hardware interfacing logic (like reading the I2C sensor) from the main state machine and UART communication functions. I also included clear inline comments explaining why certain timing delays or pin assignments were chosen, which makes the codebase highly readable and easily adaptable if the project were to be scaled to a different microcontroller or sensor suite.
 
-Tech Stack & Hardware:
-
-Python 3
-
-Raspberry Pi GPIO
-
-Adafruit CircuitPython Libraries (adafruit-blinka, adafruit-circuitpython-charlcd)
-
-Hardware: LEDs, Solderless Breadboards, Potentiometers, and 16x2 LCDs.
